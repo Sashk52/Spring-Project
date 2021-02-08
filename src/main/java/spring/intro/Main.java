@@ -3,7 +3,6 @@ package spring.intro;
 import java.util.List;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import spring.intro.config.AppConfig;
-import spring.intro.dao.MyService;
 import spring.intro.model.User;
 import spring.intro.service.UserService;
 
@@ -31,7 +30,5 @@ public class Main {
             System.out.println(user);
         }
 
-        MyService bean = context.getBean(MyService.class);
-        System.out.println(bean.sayHello());
     }
 }

@@ -40,7 +40,7 @@ public class UserDaoImpl implements UserDao {
         try (Session session = sessionFactory.openSession()) {
             return session.createQuery("from User", User.class).getResultList();
         } catch (Exception e) {
-            throw new RuntimeException("Can't get all comments", e);
+            throw new RuntimeException("Can't get all users", e);
         }
     }
 }

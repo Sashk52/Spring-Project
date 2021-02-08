@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
-import spring.intro.dao.MyService;
 import spring.intro.model.User;
 
 @Configuration
@@ -16,10 +15,6 @@ import spring.intro.model.User;
         "spring.intro.dao"
 })
 public class AppConfig {
-    @Bean
-    public MyService getMyService() {
-        return () -> "Hello mates!";
-    }
 
     @Bean
     public DataSource getDataSourse() {
