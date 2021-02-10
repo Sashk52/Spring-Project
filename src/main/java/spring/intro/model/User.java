@@ -14,6 +14,14 @@ public class User {
     private String lastName;
     private String email;
 
+    public User(String firstName, String email) {
+        this.firstName = firstName;
+        this.email = email;
+    }
+
+    public User() {
+    }
+
     public Long getId() {
         return id;
     }
