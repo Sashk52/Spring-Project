@@ -29,12 +29,12 @@ public class UserController {
         userService.add(new User("Ed", "ed@i.ua"));
     }
 
-    @GetMapping("/get/{userId}")
+    @GetMapping("/get/{id}")
     public UserResponceDto getUserById(Long userId) {
         return userMapper.getUserDto(userService.getUser(userId));
     }
 
-    @GetMapping("/")
+    @GetMapping
     public List<UserResponceDto> getAll() {
         return userService.listUsers()
                 .stream()
