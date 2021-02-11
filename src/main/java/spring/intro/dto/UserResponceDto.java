@@ -1,7 +1,6 @@
 package spring.intro.dto;
 
 public class UserResponceDto {
-
     private Long id;
     private String firstName;
     private String email;
