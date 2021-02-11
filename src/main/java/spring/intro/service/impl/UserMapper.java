@@ -15,13 +15,10 @@ public class UserMapper {
 
     public UserResponceDto getUserDto(User user) {
         UserResponceDto userResponceDto = new UserResponceDto();
+        userResponceDto.setId(user.getId());
         userResponceDto.setFirstName(user.getFirstName());
         userResponceDto.setEmail(user.getEmail());
         return userResponceDto;
-    }
-
-    public User getUserFromDto(UserResponceDto userResponceDto) {
-        return userService.getUser(userResponceDto.getId());
     }
 
 }

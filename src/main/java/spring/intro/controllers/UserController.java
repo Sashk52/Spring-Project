@@ -3,6 +3,7 @@ package spring.intro.controllers;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import spring.intro.dto.UserResponceDto;
@@ -29,9 +30,9 @@ public class UserController {
         userService.add(new User("Ed", "ed@i.ua"));
     }
 
-    @GetMapping("/get/{id}")
-    public UserResponceDto getUserById(Long userId) {
-        return userMapper.getUserDto(userService.getUser(userId));
+    @GetMapping("/{id}")
+    public UserResponceDto getUserById(@PathVariable("id") Long id) {
+        return userMapper.getUserDto(userService.getUser(id));
     }
 
     @GetMapping
